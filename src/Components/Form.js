@@ -1,13 +1,22 @@
 import { useState } from 'react'
 import Item from './Item'
 import { v4 as uuidv4 } from 'uuid';
+import Box from '@mui/material/Box';
+import MenuItem from '@mui/material/MenuItem';
+import { Button, TextField, CardActionArea, Typography } from '@mui/material';
+import Card from '@mui/material/Card';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+import CardContent from '@mui/material/CardContent';
+
+
 
 export default function Form() {
 
   const [dataArr, setDataArr] = useState([
-    { txt: "Promener le chien", id: uuidv4() },
-    { txt: "Sport", id: uuidv4() },
-    { txt: "Coder avec React", id: uuidv4() }
+    // { txt: "Promener le chien", id: uuidv4() },
+    // { txt: "Sport", id: uuidv4() },
+    // { txt: "Coder avec React", id: uuidv4() }
   ])
   const [stateInput, setStateInput] = useState()
 
@@ -47,7 +56,7 @@ export default function Form() {
         <button className="mt-2 btn btn-primary d-block">Envoyez</button>
       </form>
 
-      <h2>Liste des choses à faire</h2>
+      <h2>Liste des choses à faire :</h2>
       <ul className="list-group">
         {dataArr.map((item => {
           return (
